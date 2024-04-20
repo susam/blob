@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Audio Frequency Interval Experiments</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body { margin: 0; line-height: 1.5; color: #333;
+          font-family: helvetica, arial, sans-serif }
+    h1, h2, h3 { margin-top: 1em; margin-bottom: 0 }
+    h1 + p, h2 + p, h3 + p { margin-top: 0.5em }
+    h1 a, h2 a, h3 a { color: #333 }
+    a { color: #03c }
+    a:link, a:visited { text-decoration: none }
+    a:hover, a:active { opacity: 0.8 }
+    main, hr, footer { max-width: 40em; padding: 0 1em; }
+    main { margin: 0 auto; }
+    hr { margin: 1.5em auto; border: 0; border-bottom: thin dotted gray }
+    footer { margin: 1.5em auto; font-size: small; text-align: center; }
+    input { margin: 0.5em 0.5em 0 0; font-size: 0.8em; padding: 0.5em }
+    ul { padding-left: 1em }
+  </style>
+
+  <script>
+    window.onload = function () {
+      function main() {
+        // Experiment set for musicians.
+        var a1 = document.getElementById('a1')
+        var a2 = document.getElementById('a2')
+        var a3 = document.getElementById('a3')
+        
+        a1.onclick = function () {
+          play([440, 493.88])
+        }
+        
+        a2.onclick = function () {
+          play([880, 987.77])
+        }
+        
+        a3.onclick = function () {
+          play([880, 933.88])
+        }
+
+        // Experiment set for non-musicians.
+        var b1 = document.getElementById('b1')
+        var b2 = document.getElementById('b2')
+        var b3 = document.getElementById('b3')
+        
+        b1.onclick = function () {
+          play([400, 480])
+        }
+        
+        b2.onclick = function () {
+          play([800, 960])
+        }
+        
+        b3.onclick = function () {
+          play([800, 880])
+        }
+      }
+
+      function play(freqs) {
+        if (freqs.length == 0) {
+          return
+        }
+
+        var ctx = new (window.AudioContext || window.webkitAudioContext)();
+        var osc = ctx.createOscillator();
+        osc.type = 'square'
+        osc.frequency.setValueAtTime(freqs[0], ctx.currentTime)
+        osc.connect(ctx.destination)
+        osc.start()
+        
+        setTimeout(function() {
+          osc.stop()
+          play(freqs.slice(1))
+        }, 600)
+      }
+
+      main()
+  }
+  </script>
+</head>
+
+<body>
+  <main>
+    <h1><a href="#">Audio Frequency Interval Experiments</a></h1>
+
+    <p>
+      Experiments in this page demonstrate that human perception of
+      audio frequency is logarithmic. An interval is the change in
+      frequency between two audio frequencies. An interval ratio
+      is the ratio of the two frequencies. Human brain perceives two
+      intervals (that is, the degree of jump from the first frequency to
+      the second) to be equal if and only if their interval ratios are
+      equal.
+    </p>
+
+    <p>
+      <a href="exa">Experiment A</a> below may be better suited to
+      musicians or someone with some form of musical training.
+      <a href="exb">Experiment B</a> below may be better suited to
+      someone who has no background in music.
+    </p>
+
+    <!-- Musician-Friendly -->
+    <h2 id="exa"><a href="#exa">Experiment A</a></h2>
+
+    <div>
+      <input id="a1" type="button" value="Play Interval 1">
+      <input id="a2" type="button" value="Play Interval 2">
+      <input id="a3" type="button" value="Play Interval 3">
+    </div>
+    <ul>
+      <li>
+        <p>
+          Play interval 1 first. It goes from 440&nbsp;Hz to
+          493.88&nbsp;Hz. The difference between the frequencies is
+          53.88&nbsp;Hz. The second frequency is 12% more than the
+          first.
+        </p>
+      </li>
+      <li>
+        <p>
+          Then play interval 2. It goes from 880&nbsp;Hz to
+          987.77&nbsp;Hz. The difference between them is 107.77&nbsp;Hz.
+          The second frequency is again 12% more than the first.
+        </p>
+      </li>
+      <li>
+        <p>
+          Now play interval 3. It goes from 880&nbsp;Hz to
+          933.88&nbsp;Hz. The difference between them is 53.88&nbsp;Hz.
+          The second frequency is only 6% more than the first.
+        </p>
+      </li>
+      <li>
+        <p>
+          Do intervals 1 and 2 feel equal? That's because both have 12%
+          increase in frequency.
+        </p>
+      </li>
+      <li>
+        <p>
+          Do intervals 1 and 3 feel unequal? That's because interval 1
+          has 12% increase in frequency whereas interval 2 has only 6%
+          increase in frequency.
+        </p>
+      </li>
+      <li>
+        <p>
+          The interval used in 1 and 2 is one tone (two semitones). The
+          interval used in 3 is less than a tone. This difference in the
+          intervals may be too small for non-musicians to discern. Go to
+          the <a href="#exb">next section</a> to see another experiment
+          with larger intervals that might be easier for non-musicians.
+        </p>
+      </li>
+    </ul>
+
+    <!-- Non-Musician-Friendly -->
+    <h2 id="exb"><a href="#exb">Experiment B</a></h2>
+
+    <div>
+      <input id="b1" type="button" value="Play Interval 1">
+      <input id="b2" type="button" value="Play Interval 2">
+      <input id="b3" type="button" value="Play Interval 3">
+    </div>
+    <ul>
+      <li>
+        <p>
+          Play interval 1 first. It goes from 400&nbsp;Hz to
+          480&nbsp;Hz. The difference between the frequencies is
+          80&nbsp;Hz. The second frequency is 20% more than the first.
+        </p>
+      </li>
+      <li>
+        <p>
+          Then play interval 2. It goes from 800&nbsp;Hz to 960&nbsp;Hz.
+          The difference between them is 160&nbsp;Hz. The second
+          frequency is again 20% more than the first.
+        </p>
+      </li>
+      <li>
+        <p>
+          Now play interval 3. It goes from 800&nbsp;Hz to 880&nbsp;Hz.
+          The difference between them is 80&nbsp;Hz. The second
+          frequency is only 10% more than the first.
+        </p>
+      </li>
+      <li>
+        <p>
+          Do intervals 1 and 2 feel equal? That's because both have 20%
+          increase in frequency.
+        </p>
+      </li>
+      <li>
+        <p>
+          Do intervals 1 and 3 feel unequal? That's because interval 1
+          has 20% increase in frequency whereas interval 2 has only 10%
+          increase in frequency.
+        </p>
+      </li>
+      <li>
+        <p>
+          If the intervals sound unpleasant to you because the frequencies
+          do not correspond to any valid notes or intervals in music, go
+          to the <a href="#ex1">previous section</a> to see another
+          experiment for musicians.
+        </p>
+      </li>
+    </ul>
+  </main>
+
+  <hr>
+
+  <footer>
+    Copyright &copy; 2020 Susam Pal
+  </footer>
+</body>
+</html>

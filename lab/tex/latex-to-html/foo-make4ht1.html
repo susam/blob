@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html xml:lang='en-US' lang='en-US'> 
+<head><title>LaTeX to HTML Demo</title> 
+<meta charset='utf-8' /> 
+<meta name='generator' content='TeX4ht (https://tug.org/tex4ht/)' /> 
+<meta name='viewport' content='width=device-width,initial-scale=1' /> 
+<link type='text/css' rel='stylesheet' href='foo-make4ht.css' /> 
+<meta name='src' content='foo.tex' /> 
+<script>window.MathJax = { tex: { tags: "ams", inlineMath: [ ["\\\(","\\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes: true, processEnvironments: true, packages: ['base', 'color', 'ams'] }, loader: { load: ['[tex]/color', '[tex]/ams'] } }; </script> 
+ <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' async='async' id='MathJax-script'></script>  
+</head><body>
+<div class='maketitle'>
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+
+<h2 class='titleHead'>LaTeX to HTML Demo</h2>
+<div class='author'><span class='cmr-12'>Susam Pal</span></div>
+<br />
+<div class='date'>2 Sep 2020</div>
+</div>
+<h3 class='sectionHead'><span class='titlemark'>1   </span> <a id='x1-10001'></a>Euler’s Identity</h3>
+<!-- l. 14 --><p class='noindent'>In mathematics, <span class='cmti-10'>Euler’s identity </span>is the equality \[ e^{i \pi } + 1 = 0. \]
+</p><!-- l. 17 --><p class='noindent'>Euler’s identity is a special case of Euler’s formula from complex analysis, which
+states that for any real number \( x \), \[ e^{ix} = \cos x + i \sin x. \]
+</p><!-- l. 21 --><p class='noindent'>
+</p>
+<h3 class='sectionHead'><span class='titlemark'>2   </span> <a id='x1-20002'></a>Binomial Theorem</h3>
+<!-- l. 22 --><p class='noindent'>\[ (x+y)^n = \sum _{k=0}^n{n \choose k} x^{n - k} y^k. \]
+</p><!-- l. 24 --><p class='noindent'>
+</p>
+<h3 class='sectionHead'><span class='titlemark'>3   </span> <a id='x1-30003'></a>Exponential Function</h3>
+<!-- l. 25 --><p class='noindent'>\[ e^x = \lim _{n \to \infty } \left ( 1+ \frac{x}{n} \right )^n. \]
+                                                                  
+
+                                                                  
+</p><!-- l. 28 --><p class='noindent'>
+</p>
+<h3 class='sectionHead'><span class='titlemark'>4   </span> <a id='x1-40004'></a>Cauchy-Schwarz Inequality</h3>
+<!-- l. 33 --><p class='noindent'>\[ \left ( \sum _{k=1}^n a_k b_k \right )^2 \leq \left ( \sum _{k=1}^n a_k^2 \right ) \left ( \sum _{k=1}^n b_k^2 \right ) \]
+</p><!-- l. 36 --><p class='noindent'>
+</p>
+<h3 class='sectionHead'><span class='titlemark'>5   </span> <a id='x1-50005'></a>Bayes’ Theorem</h3>
+<!-- l. 37 --><p class='noindent'>\[ P(A \mid B) = \frac{P(B \mid A) \, P(A)}{P(B)}. \]
+</p><!-- l. 40 --><p class='noindent'>
+</p>
+<h3 class='sectionHead'><span class='titlemark'>6   </span> <a id='x1-60006'></a>Euler’s Summation Formula</h3>
+<div class='newtheorem'>
+<!-- l. 42 --><p class='noindent'><span class='head'>
+<a id='x1-6001r1'></a>
+<span class='cmbx-10'>Theorem 1 </span>(Euler’s summation formula)<span class='cmbx-10'>.</span>  </span><span class='cmti-10'>If </span>\( f \) <span class='cmti-10'>has a continuous derivative </span>\( f' \) <span class='cmti-10'>on
+</span><span class='cmti-10'>the interval </span>\( [y, x] \)<span class='cmti-10'>, where </span>\( 0 &lt; y &lt; x \)<span class='cmti-10'>, then</span>
+</p><!-- l. 51 --><p class='noindent'>\begin{align} \sum _{y &lt; n \le x} f(n) = &amp; \int _y^x f(t) dt + \int _y^x (t - [t]) f'(t) dt \notag \\ &amp; + f(x)([x] - x) - f(y)([y] - y). \label{theorem} \end{align}
+</p>
+</div>
+<!-- l. 55 --><p class='noindent'>
+</p>
+<div class='proof'>
+<!-- l. 56 --><p class='noindent'><span class='head'>
+<span class='cmti-10'>Proof.</span> </span>Let \( m = [y] \), \( k = [x] \). For integers \( n \) and \( n - 1 \) in \( [y, x] \) we have \begin{align*} \int _{n-1}^n [t] f'(t) dt &amp; = \int _{n-1}^n f'(t) dt \\ &amp; = (n - 1) \bigl ( f(n) - f(n - 1) \bigr ) \\ &amp; = \bigl ( n f(n) - (n - 1) f(n - 1) \bigr ) - f(n). \end{align*}
+</p><!-- l. 66 --><p class='noindent'>Summing from \( n = m + 1 \) to \( n = k \) we find \begin{align*} \int _{m}^k [t] f'(t) dt &amp; = \sum _{n = m + 1}^k \bigl ( n f(n) - (n - 1) f(n - 1) \bigr ) - \sum _{y &lt; n \le x} f(n) \\ &amp; = k f(k) - m f(m) - \sum _{y &lt; n \le x} f(n). \end{align*}
+                                                                  
+
+                                                                  
+</p><!-- l. 74 --><p class='noindent'>Hence, \begin{align} \sum _{y &lt; n \le x} f(n) &amp; = - \int _{m}^k [t] f'(t) dt + k f(k) - m f(m) \notag \\ &amp; = - \int _{y}^x [t] f'(t) dt + k f(x) - m f(y). \label{summation} \end{align}
+</p><!-- l. 82 --><p class='noindent'>Integration by parts gives us \begin{equation*} \int _y^x f(t) dt = x f(x) - y f(y) - \int _y^x t f'(t) dt. \end{equation*}
+When this is combined with \( \eqref{summation} \) we obtain \( \eqref{theorem} \).                                                □
+</p>
+</div>
+<!-- l. 91 --><p class='noindent'>
+</p>
+<h3 class='sectionHead'><span class='titlemark'>7   </span> <a id='x1-70007'></a>Hello World Program</h3>
+<!-- l. 93 --><p class='noindent'>Here is an example of <span class='cmtt-10'>"hello, world" </span>program written in the C programming
+language:
+                                                                  
+
+                                                                  
+</p>
+<pre class='verbatim' id='verbatim-1'>
+#include &lt;stdio.h&gt;
+int main()
+{
+    printf("hello, world\n");
+    return 0;
+}</pre>
+<!-- l. 104 --><p class='nopar'> </p> 
+</body> 
+</html>
