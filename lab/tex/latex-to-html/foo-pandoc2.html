@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LaTeX to HTML Demo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <style>body{margin: 0 auto; width: 40em; padding: 0 1em}</style>
+  <script>window.MathJax = {tex: {tags: 'ams'}}</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <main>
+<h1>LaTeX to HTML Demo</h1>
+<h2 id="eulers-identity">Euler’s Identity</h2>
+<p>In mathematics, <em>Euler’s identity</em> is the equality <span
+class="math display">\[e^{i \pi} + 1
+= 0.\]</span></p>
+<p>Euler’s identity is a special case of Euler’s formula from complex
+analysis, which states that for any real number <span
+class="math inline">\(x\)</span>, <span class="math display">\[e^{ix} =
+\cos x + i \sin x.\]</span></p>
+<h2 id="binomial-theorem">Binomial Theorem</h2>
+<p><span class="math display">\[(x+y)^n = \sum_{k=0}^n {n \choose k}
+x^{n - k} y^k.\]</span></p>
+<h2 id="exponential-function">Exponential Function</h2>
+<p><span class="math display">\[e^x = \lim_{n \to \infty} \left( 1+
+\frac{x}{n} \right)^n.\]</span></p>
+<h2 id="cauchy-schwarz-inequality">Cauchy-Schwarz Inequality</h2>
+<p><span class="math display">\[\left( \sum_{k=1}^n a_k b_k \right)^2
+\leq
+    \left( \sum_{k=1}^n a_k^2 \right)
+    \left( \sum_{k=1}^n b_k^2 \right)\]</span></p>
+<h2 id="bayes-theorem">Bayes’ Theorem</h2>
+<p><span class="math display">\[P(A \mid B) = \frac{P(B \mid A) \,
+P(A)}{P(B)}.\]</span></p>
+<h2 id="eulers-summation-formula">Euler’s Summation Formula</h2>
+<div class="theorem">
+<p><strong>Theorem 1</strong> (Euler’s summation formula). <em>If <span
+class="math inline">\(f\)</span> has a continuous derivative <span
+class="math inline">\(f&#39;\)</span> on the interval <span
+class="math inline">\([y,
+x]\)</span>, where <span class="math inline">\(0 &lt; y &lt; x\)</span>,
+then</em></p>
+<p><em><span class="math display">\[\begin{aligned}
+\sum_{y &lt; n \le x} f(n) = &amp; \int_y^x f(t) dt +
+                            \int_y^x (t - [t]) f&#39;(t) dt \notag \\
+                          &amp; + f(x)([x] - x) - f(y)([y] - y).
+\label{theorem}
+\end{aligned}\]</span></em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Let <span class="math inline">\(m = [y]\)</span>,
+<span class="math inline">\(k = [x]\)</span>. For integers <span
+class="math inline">\(n\)</span> and <span class="math inline">\(n -
+1\)</span> in <span class="math inline">\([y, x]\)</span> we have <span
+class="math display">\[\begin{aligned}
+\int_{n-1}^n [t] f&#39;(t) dt &amp; = \int_{n-1}^n f&#39;(t) dt \\
+                          &amp; = (n - 1) \bigl( f(n) - f(n - 1)
+                                      \bigr) \\
+                          &amp; = \bigl(
+                                n f(n) - (n - 1) f(n - 1)
+                              \bigr) - f(n).
+\end{aligned}\]</span> Summing from <span class="math inline">\(n = m +
+1\)</span> to <span class="math inline">\(n = k\)</span> we find <span
+class="math display">\[\begin{aligned}
+\int_{m}^k [t] f&#39;(t) dt &amp; = \sum_{n = m + 1}^k \bigl(
+                                n f(n) - (n - 1) f(n - 1)
+                            \bigr) - \sum_{y &lt; n \le x} f(n) \\
+                        &amp; = k f(k) - m f(m) -
+                            \sum_{y &lt; n \le x} f(n).
+\end{aligned}\]</span> Hence, <span
+class="math display">\[\begin{aligned}
+\sum_{y &lt; n \le x} f(n) &amp; = - \int_{m}^k [t] f&#39;(t) dt +
+                              k f(k) - m f(m) \notag \\
+                        &amp; = - \int_{y}^x [t] f&#39;(t) dt +
+                              k f(x) - m f(y).
+\label{summation}
+\end{aligned}\]</span> Integration by parts gives us <span
+class="math display">\[\int_y^x f(t) dt = x f(x) - y f(y) - \int_y^x t
+f&#39;(t) dt.\]</span> When this is combined with <span
+class="math inline">\(\eqref{summation}\)</span> we obtain <span
+class="math inline">\(\eqref{theorem}\)</span>. ◻</p>
+</div>
+<h2 id="hello-world-program">Hello World Program</h2>
+<p>Here is an example of <code>"hello, world"</code> program written in
+the C programming language:</p>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf(&quot;hello, world\n&quot;);
+    return 0;
+}</code></pre>
+  </main>
+</body>
+</html>
