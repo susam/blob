@@ -1,0 +1,5 @@
+# Ignore Vim swap files
+*.sw?
+
+# Ignore macOS desktop services store files.
+.DS_Store

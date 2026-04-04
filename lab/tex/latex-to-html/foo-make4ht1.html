@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head><title>LaTeX to HTML Demo</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='foo-make4ht1.css' rel='stylesheet' type='text/css' /> 
+<meta content='foo.tex' name='src' /> 
+<script>window.MathJax = { tex: { tags: "ams", }, }; </script> 
+<script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' type='text/javascript'></script>  
+</head><body>
+<div class='maketitle'>
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+
+<h2 class='titleHead'>LaTeX to HTML Demo</h2>
+ <div class='author'><span class='cmr-12'>Susam Pal</span></div>
+<br />
+<div class='date'>2 Sep 2020</div>
+</div>
+<h3 class='sectionHead' id='eulers-identity'><span class='titlemark'>1   </span> <a id='x1-10001'></a>Euler’s Identity</h3>
+<!-- l. 14 --><p class='noindent'>In mathematics, <span class='cmti-10'>Euler’s identity </span>is the equality </p><div class='mathjax-block'>\[ e^{i \pi } + 1 = 0. \]</div>
+<!-- l. 17 --><p class='noindent'>Euler’s identity is a special case of Euler’s formula from complex analysis, which
+states that for any real number <span class='mathjax-inline'>\( x \)</span>, </p><div class='mathjax-block'>\[ e^{ix} = \cos x + i \sin x. \]</div>
+<!-- l. 21 --><p class='noindent'>
+</p>
+<h3 class='sectionHead' id='binomial-theorem'><span class='titlemark'>2   </span> <a id='x1-20002'></a>Binomial Theorem</h3>
+<div class='mathjax-block'>\[ (x+y)^n = \sum _{k=0}^n {n \choose k} x^{n - k} y^k. \]</div>
+<!-- l. 24 --><p class='noindent'>
+</p>
+<h3 class='sectionHead' id='exponential-function'><span class='titlemark'>3   </span> <a id='x1-30003'></a>Exponential Function</h3>
+<div class='mathjax-block'>\[ e^x = \lim _{n \to \infty } \left ( 1+ \frac {x}{n} \right )^n. \]</div>
+                                                                  
+
+                                                                  
+<!-- l. 28 --><p class='noindent'>
+</p>
+<h3 class='sectionHead' id='cauchyschwarz-inequality'><span class='titlemark'>4   </span> <a id='x1-40004'></a>Cauchy-Schwarz Inequality</h3>
+<div class='mathjax-block'>\[ \left ( \sum _{k=1}^n a_k b_k \right )^2 \leq \left ( \sum _{k=1}^n a_k^2 \right ) \left ( \sum _{k=1}^n b_k^2 \right ) \]</div>
+<!-- l. 36 --><p class='noindent'>
+</p>
+<h3 class='sectionHead' id='bayes-theorem'><span class='titlemark'>5   </span> <a id='x1-50005'></a>Bayes’ Theorem</h3>
+<div class='mathjax-block'>\[ P(A \mid B) = \frac {P(B \mid A) \, P(A)}{P(B)}. \]</div>
+<!-- l. 40 --><p class='noindent'>
+</p>
+<h3 class='sectionHead' id='eulers-summation-formula'><span class='titlemark'>6   </span> <a id='x1-60006'></a>Euler’s Summation Formula</h3>
+<div class='newtheorem'>
+<!-- l. 42 --><p class='noindent'><span class='head'>
+<a id='x1-6001r1'></a>
+<span class='cmbx-10'>Theorem 1 </span>(Euler’s summation formula)<span class='cmbx-10'>.</span>  </span><span class='cmti-10'>If </span><span class='mathjax-inline'>\( f \) </span><span class='cmti-10'>has a continuous derivative </span><span class='mathjax-inline'>\( f' \) </span><span class='cmti-10'>on
+the interval </span><span class='mathjax-inline'>\( [y, x] \)</span><span class='cmti-10'>, where </span><span class='mathjax-inline'>\( 0 &lt; y &lt; x \)</span><span class='cmti-10'>, then</span>
+</p>
+<div class='mathjax-env mathjax-align'>\begin{align} \sum _{y &lt; n \le x} f(n) = &amp; \int _y^x f(t) dt + \int _y^x (t - [t]) f'(t) dt \notag \\ &amp; + f(x)([x] - x) - f(y)([y] - y). \label {theorem} \end{align}</div>
+</div>
+<!-- l. 53 --><p class='noindent'>
+</p>
+<div class='proof'>
+<!-- l. 56 --><p class='noindent'><span class='head'>
+<span class='cmti-10'>Proof.</span> </span>Let <span class='mathjax-inline'>\( m = [y] \)</span>, <span class='mathjax-inline'>\( k = [x] \)</span>. For integers <span class='mathjax-inline'>\( n \)</span> and <span class='mathjax-inline'>\( n - 1 \)</span> in <span class='mathjax-inline'>\( [y, x] \)</span> we have </p><div class='mathjax-env mathjax-align*'>\begin{align*} \int _{n-1}^n [t] f'(t) dt &amp; = \int _{n-1}^n f'(t) dt \\ &amp; = (n - 1) \bigl ( f(n) - f(n - 1) \bigr ) \\ &amp; = \bigl ( n f(n) - (n - 1) f(n - 1) \bigr ) - f(n). \end{align*}</div>
+<!-- l. 66 --><p class='noindent'>Summing from <span class='mathjax-inline'>\( n = m + 1 \)</span> to <span class='mathjax-inline'>\( n = k \)</span> we find </p><div class='mathjax-env mathjax-align*'>\begin{align*} \int _{m}^k [t] f'(t) dt &amp; = \sum _{n = m + 1}^k \bigl ( n f(n) - (n - 1) f(n - 1) \bigr ) - \sum _{y &lt; n \le x} f(n) \\ &amp; = k f(k) - m f(m) - \sum _{y &lt; n \le x} f(n). \end{align*}</div>
+<!-- l. 74 --><p class='noindent'>Hence, </p><div class='mathjax-env mathjax-align'>\begin{align} \sum _{y &lt; n \le x} f(n) &amp; = - \int _{m}^k [t] f'(t) dt + k f(k) - m f(m) \notag \\ &amp; = - \int _{y}^x [t] f'(t) dt + k f(x) - m f(y). \label {summation} \end{align}</div>
+<!-- l. 82 --><p class='noindent'>Integration by parts gives us </p><div class='mathjax-env mathjax-equation*'>\begin{equation*} \int _y^x f(t) dt = x f(x) - y f(y) - \int _y^x t f'(t) dt. \end{equation*}</div> When this is combined with <span class='mathjax-inline'>\( \eqref {summation} \)</span> we obtain <span class='mathjax-inline'>\( \eqref {theorem} \)</span>.         □
+                                                                  
+
+                                                                  
+</div>
+<!-- l. 91 --><p class='noindent'>
+</p>
+<h3 class='sectionHead' id='hello-world-program'><span class='titlemark'>7   </span> <a id='x1-70007'></a>Hello World Program</h3>
+<!-- l. 93 --><p class='noindent'>Here is an example of <span class='cmtt-10'>"hello, world" </span>program written in the C programming
+language:
+                                                                  
+
+                                                                  
+</p>
+<pre class='verbatim' id='verbatim-1'>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf("hello, world\n");
+    return 0;
+}</pre>
+<!-- l. 104 --><p class='nopar'>
+</p>
+ 
+</body> 
+</html>

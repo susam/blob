@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<title>Canvas Fun</title>
+<body style="background: #000">
+<canvas id="c" width="1024" height="1024" style="display: block; margin: 0 auto"></canvas>
+<script>
+  const ctx = c.getContext('2d')
+  let t = 0
+  window.setInterval(() => {
+    for(let x=0; x < 256; x++) {
+      for(let y=0; y < 256; y++) {
+        let g = (x ^ y) % (t % 256)
+        ctx.fillStyle = `rgb(0, ${g}, 0)`
+        ctx.fillRect(4*x, 4*y, 4, 4)
+      }
+    }
+    t++
+  }, 40)
+</script>
